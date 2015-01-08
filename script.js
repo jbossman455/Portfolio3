@@ -5,6 +5,12 @@
  */
 
 $("document").ready(function() {
-    $(".whatever").css("background-color", "yellow");
+    $(".whatever").css("background-color", "skyblue");
+
+    $("p:last").css("background-color", "lightgreen");
+    
+    
+    $("h4").css("background-color", "blue");
 
 });
+
