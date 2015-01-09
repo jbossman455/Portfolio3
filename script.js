@@ -5,12 +5,30 @@
  */
 
 $("document").ready(function() {
-    $(".whatever").css("background-color", "skyblue");
+    $(".whatever").css("background-color", "whitesmoke");
 
-    $("p:last").css("background-color", "lightgreen");
+    $("p").css("background-color", "skyblue");
     
     
-    $("h4").css("background-color", "blue");
+    $("h1").css("background-color", "violet");
+    
+    
+    
+    $('h1').bind('mouseover' , mouseOverMe).bind('mouseout', mouseOutMe);
+    
+    $('p').bind('click', mouseClick);
 
 });
+
+function mouseOverMe () {
+    $("h1").html("Ravens!!!!");
+}
+
+function mouseOutMe () {
+    $('h1').html ("Life is a beach");
+}
+
+function mouseClick () {
+    $('p').html ('clicked!!!!');
+}
 
