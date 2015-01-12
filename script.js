@@ -29,6 +29,6 @@ function mouseOutMe () {
 }
 
 function mouseClick () {
-    $('p').html ('clicked!!!!');
+    $('p').html ("Beach");
 }
 
