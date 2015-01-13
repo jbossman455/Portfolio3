@@ -31,4 +31,25 @@ function mouseOutMe () {
 function mouseClick () {
     $('p').html ("Beach");
 }
+$("document").ready(function() {
+
+   $('$replaceWText').bind('click', replaceWText);
+   
+   $('$randPara').bind ('click' , addAPara);
+   
+   $('$removeAPara').bind('click', removeAPara);
+   
+});
+
+function removeAPara () {
+    $('$randPara p:last').remove();
+}
+
+function addAPara () {
+    $('$randPara').append('<p>ADDED</P>');
+}
+
+function replaceWText () {
+    $('$replaceWText').text('Replaced!');
+}
 
