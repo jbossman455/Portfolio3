@@ -6,50 +6,64 @@
 
 $("document").ready(function() {
     $(".whatever").css("background-color", "whitesmoke");
+   
+   
 
-    $("p").css("background-color", "skyblue");
-    
-    
-    $("h1").css("background-color", "violet");
-    
-    
-    
-    $('h1').bind('mouseover' , mouseOverMe).bind('mouseout', mouseOutMe);
-    
-    $('p').bind('click', mouseClick);
+    $('#randPara').bind('click', addAPara);
+    $('#removeAPara').bind('click', removeAPara);
+    $('#replaceWText').bind('click', replaceWText);
+
+    $('show').css('visibility', 'hidden');
+
+    $('#hide').bind('click', hideThePage);
+
+    $('#show').bind('click', showThePage);
+
+//    $('#superHumans').accordion({header: "h3"});
+//    $('#superHumans').css('width','400px');
+//    
+//    $('h3').css('background','cyan');
+
 
 });
 
-function mouseOverMe () {
-    $("h1").html("Ravens!!!!");
+function mouseOverMe() {
+    $("h3").html("Ravens!!!!");
 }
 
-function mouseOutMe () {
-    $('h1').html ("Life is a beach");
+function mouseOutMe() {
+    $('h1').html("Life is a beach");
 }
 
-function mouseClick () {
-    $('p').html ("Beach");
-}
-$("document").ready(function() {
-
-   $('$replaceWText').bind('click', replaceWText);
-   
-   $('$randPara').bind ('click' , addAPara);
-   
-   $('$removeAPara').bind('click', removeAPara);
-   
-});
-
-function removeAPara () {
-    $('$randPara p:last').remove();
+function mouseClick() {
+    $('p').html("Beach");
 }
 
-function addAPara () {
-    $('$randPara').append('<p>ADDED</P>');
+
+
+function removeAPara() {
+    $('#randPara p:last').remove();
 }
 
-function replaceWText () {
-    $('$replaceWText').text('Replaced!');
+function addAPara() {
+    $('#randPara').append('<p>ADDED</P>');
 }
 
+function replaceWText() {
+    $('#replaceWText').text('Replaced!');
+}
+
+
+
+
+
+function hideThePage() {
+    $('#show').css('visibility', 'visible');
+    $('div').hide('slide', {}, 2500);
+    $('#show').show('fold', {}, 2500);
+}
+
+function showThePage() {
+    $('div').show('fold', {}, 2500);
+
+}
